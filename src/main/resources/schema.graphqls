@@ -1,0 +1,13 @@
+type Person {
+    name: ID!
+    born: Int
+    actedIn: [Movie] @relation(name:"ACTED_IN")
+}
+type Movie {
+    title: ID!
+    released: Int
+    tagline: String
+}
+type Query {
+    person : [Person]
+}
